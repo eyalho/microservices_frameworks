@@ -6,7 +6,8 @@ from nameko.web.handlers import http
 
 class API:
     name = 'api'
-    dispatch = EventDispatcher()  # Event dispatcher method via dependency injection
+    dispatch = EventDispatcher(
+    )  # Event dispatcher method via dependency injection
 
     # Just return the json html
     @http('GET', '/hello')
